@@ -103,11 +103,19 @@ class BackstagePassUpdater(UpdatableItem):
             self.item.quality = 50
 
 class ConjuredUpdater(UpdatableItem):
-    """Handles the logic for "Conjured" items."""
-    def _update_quality(self):
-        # "degrade in Quality twice as fast as normal items"
-        decrease = 4 if self.item.sell_in < 0 else 2
-        self._decrease_quality(decrease)
+    """Handles the logic for "Conjured" items.
+    
+    For refactoring, this must match the
+    original Golden Master, which treated "Conjured"
+    like a normal item.
+    """
+    pass # Inherits the "Normal Item" behavior from UpdatableItem
+
+    # example actual implementation
+    # def _update_quality(self):
+    #     # "degrade in Quality twice as fast as normal items"
+    #     decrease = 4 if self.item.sell_in < 0 else 2
+    #     self._decrease_quality(decrease)
 
 
 # --- Factory ---
