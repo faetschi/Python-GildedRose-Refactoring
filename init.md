@@ -23,7 +23,12 @@ python texttest_fixture.py > ../golden_master.txt
 - Now refactoring starts
 
 
-
+## 7. Run Tests after changes
+```python
+python texttest_fixture.py > ../new_output.txt
+# compare files
+git diff --no-index ../golden_master.txt ../new_output.txt
+```
 
 
 
