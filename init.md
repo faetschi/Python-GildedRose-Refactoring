@@ -9,6 +9,9 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ## 3. Activate the Virtual Environment
 .\venv\Scripts\Activate.ps1
 
+### To deactivate
+deactivate
+
 ## 4. Install Dependencies
 pip install --upgrade pip
 pip install -r python\requirements.txt
@@ -26,16 +29,11 @@ python texttest_fixture.py > ../golden_master.txt
 ## 7. Run Tests after changes
 ```python
 python texttest_fixture.py > ../new_output.txt
-# compare files
 git diff --no-index ../golden_master.txt ../new_output.txt
 ```
 
+## 8. Add Unit Tests
+test_gilded_rose.py
 
-
-python python\tests\test_gilded_rose.py
-"“The GildedRoseRefactoring Kata contains failing tests as a starting point. Your task is to make the code pass while refactoring.”"
-
-
-...
-
-deactivate
+## 9. Run Unit Tests
+python -m unittest discover
