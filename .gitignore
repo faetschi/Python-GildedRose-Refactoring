@@ -1,3 +1,8 @@
-generate_structure.py
-project_structure.txt
+# Environment
 venv/
+
+# Testing
+new_output.txt
+
+# Context Engineering
+.continue/
